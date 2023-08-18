@@ -1,9 +1,8 @@
 const hre = require("hardhat");
-const fs = require("fs");
 
 async function main() {
   // Get the contract factory
-  const NFT = await hre.ethers.getContractFactory("mahesh");
+  const NFT = await hre.ethers.getContractFactory("mahesh"); // Make sure the contract name is correct
 
   // Deploy the contract
   const nft = await NFT.deploy();
@@ -12,7 +11,8 @@ async function main() {
   await nft.deployed();
 
   // Log the contract address
-  console.log("NFT contract deployed to:", nft.address)
+  console.log("NFT contract deployed to:", nft.address);
+}
 
 // Execute the deployment function
 main()
@@ -21,4 +21,3 @@ main()
     console.error(error);
     process.exit(1);
   });
-}
