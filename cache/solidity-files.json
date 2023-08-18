@@ -1,0 +1,115 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "E:\\poly1\\contracts\\mahesh.sol": {
+      "lastModificationDate": 1692364063045,
+      "contentHash": "80df3d61a58852f0ab8e9634e5cdf61e",
+      "sourceName": "contracts/mahesh.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "erc721a/contracts/ERC721A.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "mahesh"
+      ]
+    },
+    "E:\\poly1\\node_modules\\erc721a\\contracts\\ERC721A.sol": {
+      "lastModificationDate": 1692364126994,
+      "contentHash": "227e9db819fd61602f833edafcda7d4a",
+      "sourceName": "erc721a/contracts/ERC721A.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721A.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "ERC721A",
+        "ERC721A__IERC721Receiver"
+      ]
+    },
+    "E:\\poly1\\node_modules\\erc721a\\contracts\\IERC721A.sol": {
+      "lastModificationDate": 1692364127068,
+      "contentHash": "c31a05698ddc2f109ba8723105d854c6",
+      "sourceName": "erc721a/contracts/IERC721A.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "IERC721A"
+      ]
+    }
+  }
+}
