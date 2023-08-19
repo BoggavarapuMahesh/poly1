@@ -3,6 +3,7 @@
 pragma solidity ^0.8.9;
 
 import "erc721a/contracts/ERC721A.sol";
+
 contract mahesh is ERC721A {
     address public owner;
 
@@ -15,9 +16,12 @@ contract mahesh is ERC721A {
 
     // URL for the prompt description
     string public prompt = "hello this is mahesh";
-    construct() ERC721A("mahesh","mah")
-owner =msg.sender;
-     // Modifier that only allows the owner to execute a function
+
+    constructor() ERC721A("mahesh", "mah") {
+        owner = msg.sender;
+    }
+
+    // Modifier that only allows the owner to execute a function
     modifier onlyOwner() {
         require(msg.sender == owner, "Only owner can perform this action!");
         _;
@@ -31,7 +35,8 @@ owner =msg.sender;
         );
         _mint(msg.sender, quantity);
     }
-// Override the baseURI function to return the base URL for the NFTs
+
+    // Override the baseURI function to return the base URL for the NFTs
     function _baseURI() internal view override returns (string memory) {
         return baseUrl;
     }
