@@ -1,36 +1,25 @@
-# poly1
-Polygon-Advanced-Module-1
-This is the first project in Polygon-Advance, in this project, I was tasked to deploy an NFT collection on the Ethereum blockchain, Map the collection to Polygon, and Transfer assets over via the Polygon Bridge.
+# ERC721 Token Contract: mahesh
+This is a sample README template for the mahesh ERC721 token contract. The contract is based on the ERC721A standard and implements additional functionality. It allows for the minting of unique non-fungible tokens (NFTs) with a maximum quantity limit.
+# Contract Overview
+The mahesh contract inherits from the ERC721A contract and introduces custom features:
 
-Getting Started
-Executing program
-Download the codes by downloading the entire repository which will give you access to other contents of the repository. Navigate to the Poly_Proof project directory, run:
+Minting: The owner of the contract can mint new NFTs, with a maximum quantity of 5 tokens.
+Base URL: The base URL for the NFT metadata is set to a specific IPFS gateway.
+Prompt Description: A prompt description can be retrieved from the contract.
+# Contract Details
+# Constructor
+The constructor sets the initial state of the contract and assigns the contract owner.
 
- npm install
-After installing the dependencies, run the test file by using the following command:
+# Modifiers
+onlyOwner: Ensures that certain functions can only be executed by the contract owner.
+# Functions
+mint(uint256 quantity): Allows the contract owner to mint a specified quantity of NFTs. The total supply cannot exceed the maximum limit.
 
-npx hardhat test
-Deploying the ERC721 Contract
-Before deploying, make sure to rename ".env.example" to ".env" and provide your wallet private key where required i.e. "PRIVATE_KEY= 'your wallet private key'". Run the following command to deploy the ERC721 contract to the Goerli Ethereum Testnet:
+promptDescription(): Retrieves the prompt description set for the contract.
 
-npx hardhat run scripts/deploy.js --network goerli 
-NOTE:
-After deploying the address will generate. So, copy that address into contarctAddress.js(stored in metadata folder) and also in batchMint.js(stored in scripts folder)
-
-The script will deploy the contract
-
-Batch Mint NFTs
-Run the following command to batch-mint NFTs using the deployed ERC721 contract:
-
-npx hardhat run scripts/batchMint.js --network goerli
-The script will mint the specified number of NFTs and assign them to your address.
-
-Approve and Deposit NFTs to Polygon Mumbai
-Run the following commands to approve and deposit the minted NFTs from Ethereum to the Polygon Mumbai network using the FxPortal Bridge:
-
-npx hardhat run scripts/approveDeposit.js --network goerli
-Author
-Geet Kiran
-
-License
-This project is licensed under the MIT License. You can make a copy of the project to use for your own purposes.
+_baseURI(): Overrides the baseURI function to provide the base URL for NFT metadata.
+# Usage
+Deploy the contract to the Ethereum network.
+As the contract owner, you can mint new NFTs using the mint function.
+Token metadata is hosted on IPFS, and the base URL can be accessed through _baseURI().
+Retrieve the prompt description using the promptDescription function
